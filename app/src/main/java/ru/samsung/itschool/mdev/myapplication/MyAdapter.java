@@ -33,7 +33,10 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewRow> {
 
     @Override
     public int getItemCount() {
-        return posts.size();
+        if(posts == null)
+            return 0;
+        else
+            return posts.size();
     }
 
     static class ViewRow extends RecyclerView.ViewHolder {
